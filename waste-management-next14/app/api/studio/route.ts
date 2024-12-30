@@ -7,7 +7,9 @@ const execPromise = util.promisify(exec);
 export async function GET() {
   try {
     // Run Drizzle Studio command
-    const { stdout, stderr } = await execPromise('npx drizzle-kit studio');
+      const { stdout, stderr } = await execPromise('npx drizzle-kit studio', {
+        cwd: '/tmp',
+    });
 
     if (stderr) {
       console.error(`Stderr: ${stderr}`);
