@@ -1,0 +1,1 @@
+# WMA-Waste-Management-App 
